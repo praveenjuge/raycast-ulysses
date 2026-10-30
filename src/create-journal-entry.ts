@@ -2,8 +2,8 @@ import { getPreferenceValues, LaunchProps, showHUD } from "@raycast/api";
 import { journalSheetText, journalSheetUrl } from "./ulysses-url";
 import { openUlyssesCallback } from "./utils";
 
-export default async function NewJournalEntry(props: LaunchProps<{ arguments: Arguments.NewJournalEntry }>) {
-  const preferences = getPreferenceValues<Preferences.NewJournalEntry>();
+export default async function CreateJournalEntry(props: LaunchProps<{ arguments: Arguments.CreateJournalEntry }>) {
+  const preferences = getPreferenceValues<Preferences.CreateJournalEntry>();
   const group = preferences.journalGroup.trim() || "Journal";
   const background = !preferences.showInUlysses;
   const url = journalSheetUrl({
